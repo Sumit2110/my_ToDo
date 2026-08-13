@@ -6,7 +6,7 @@ const protect = async (req, res, next) => {
         
         const authHeader = req.headers.authorization;
 
-        // Check if token exists
+       
         if (!authHeader || !authHeader.startsWith("Bearer ")) {
             return res.status(401).json({
                 message: "Not authorized, no token"
