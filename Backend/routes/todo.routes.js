@@ -11,13 +11,13 @@ const {
 
 const router = express.Router();
 
-// Create Todo
+
 router.post("/", protect, createTodo);
 
-// Get user's Todos
+
 router.get("/", protect, getTodos);
 
-// Update Todo
+
 router.put("/:id", protect, updateTodo);
 
 router.delete("/:id", protect, deleteTodo);
