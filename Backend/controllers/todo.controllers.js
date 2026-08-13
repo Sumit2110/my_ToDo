@@ -1,6 +1,6 @@
 const Todo = require("../models/todo.model");
 
-// Create Todo
+
 const createTodo = async (req, res) => {
     try {
         const { title, description } = req.body;
@@ -31,7 +31,7 @@ const createTodo = async (req, res) => {
 };
 
 
-// Get user's Todos
+
 const getTodos = async (req, res) => {
     try {
         const todos = await Todo.find({
@@ -52,8 +52,7 @@ const getTodos = async (req, res) => {
 };
 
 
-// Update Todo
-// Update Todo
+
 const updateTodo = async (req, res) => {
     try {
 
@@ -77,22 +76,22 @@ const updateTodo = async (req, res) => {
         }
 
 
-        // Update title
+       
         if (title !== undefined) {
             todo.title = title;
         }
 
 
-        // Update description
+       
         if (description !== undefined) {
             todo.description = description;
         }
 
 
-        // Update completion status
+       
         if (completed !== undefined) {
 
-            // Task is being completed
+           
             if (
                 completed === true &&
                 todo.completed === false
@@ -104,7 +103,7 @@ const updateTodo = async (req, res) => {
             }
 
 
-            // Task is being marked incomplete
+            
             else if (
                 completed === false &&
                 todo.completed === true
@@ -137,7 +136,7 @@ const updateTodo = async (req, res) => {
     }
 };
 
-// Delete Todo
+
 const deleteTodo = async (req, res) => {
     try {
         const todo = await Todo.findOneAndDelete({
@@ -163,7 +162,7 @@ const deleteTodo = async (req, res) => {
     }
 };
 
-// Export controllers
+
 module.exports = {
     createTodo,
     getTodos,
