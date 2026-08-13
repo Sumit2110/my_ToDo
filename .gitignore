@@ -1,18 +1,18 @@
-# Backend
+
 Backend/node_modules/
 Backend/.env
 
-# Frontend
+
 Frontend/node_modules/
 Frontend/dist/
 
-# Environment files
+
 .env
 *.env
 
-# Logs
+
 *.log
 
-# OS files
+
 .DS_Store
 Thumbs.db
