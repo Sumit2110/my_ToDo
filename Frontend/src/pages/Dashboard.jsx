@@ -19,23 +19,17 @@ function Dashboard() {
     const [error, setError] = useState("");
 
 
-    // =========================
-    // SEARCH
-    // =========================
+    
 
     const [searchTerm, setSearchTerm] = useState("");
 
 
-    // =========================
-    // FILTER
-    // =========================
+   
 
     const [filter, setFilter] = useState("all");
 
 
-    // =========================
-    // EDIT
-    // =========================
+    
 
     const [editingTodo, setEditingTodo] =
         useState(null);
@@ -47,18 +41,14 @@ function Dashboard() {
         useState("");
 
 
-    // =========================
-    // USER
-    // =========================
+   
 
     const user = JSON.parse(
         localStorage.getItem("user") || "null"
     );
 
 
-    // =========================
-    // GET TODOS
-    // =========================
+   
 
     useEffect(() => {
 
@@ -125,9 +115,7 @@ function Dashboard() {
     };
 
 
-    // =========================
-    // ADD TODO
-    // =========================
+    
 
     const handleTodoAdded = async (
         title,
@@ -199,9 +187,7 @@ function Dashboard() {
     };
 
 
-    // =========================
-    // TOGGLE TODO
-    // =========================
+  
 
     const handleToggleTodo = async (
         todo
@@ -279,9 +265,7 @@ function Dashboard() {
     };
 
 
-    // =========================
-    // EDIT TODO
-    // =========================
+    
 
     const handleEdit = (todo) => {
 
@@ -300,9 +284,7 @@ function Dashboard() {
     };
 
 
-    // =========================
-    // SAVE EDIT
-    // =========================
+  
 
     const handleSaveEdit = async () => {
 
@@ -396,9 +378,7 @@ function Dashboard() {
     };
 
 
-    // =========================
-    // DELETE TODO
-    // =========================
+    
 
     const handleDelete = async (
         todoId
@@ -472,9 +452,7 @@ function Dashboard() {
     };
 
 
-    // =========================
-    // LOGOUT
-    // =========================
+    
 
     const handleLogout = () => {
 
@@ -494,17 +472,13 @@ function Dashboard() {
     };
 
 
-    // =========================
-    // FILTER + SEARCH
-    // =========================
+   
 
     const filteredTodos =
         todos.filter((todo) => {
 
 
-            // -------------------------
-            // STATUS FILTER
-            // -------------------------
+            
 
             if (
                 filter === "pending" &&
@@ -526,9 +500,7 @@ function Dashboard() {
             }
 
 
-            // -------------------------
-            // SEARCH
-            // -------------------------
+           
 
             const search =
                 searchTerm
@@ -561,9 +533,7 @@ function Dashboard() {
         });
 
 
-    // =========================
-    // LOADING
-    // =========================
+   
 
     if (loading) {
 
@@ -584,21 +554,13 @@ function Dashboard() {
     }
 
 
-    // =========================
-    // DASHBOARD UI
-    // =========================
 
     return (
 
         <div className="dashboard">
 
 
-            {/* =================================================
-                SIDEBAR
-
-                todos is passed here so Sidebar can calculate
-                daily created/completed/pending tasks.
-            ================================================= */}
+            
 
             <Sidebar
                 onLogout={handleLogout}
@@ -606,25 +568,18 @@ function Dashboard() {
             />
 
 
-            {/* =================================================
-                MAIN CONTENT
-            ================================================= */}
-
+           
             <main className="main-content">
 
 
-                {/* =========================
-                    NAVBAR
-                ========================= */}
+               
 
                 <Navbar
                     user={user}
                 />
 
 
-                {/* =========================
-                    ERROR
-                ========================= */}
+               
 
                 {error && (
 
@@ -637,18 +592,14 @@ function Dashboard() {
                 )}
 
 
-                {/* =========================
-                    STATISTICS
-                ========================= */}
+              
 
                 <Stats
                     todos={todos}
                 />
 
 
-                {/* =========================
-                    ADD TODO
-                ========================= */}
+               
 
                 <section className="add-section">
 
@@ -677,16 +628,12 @@ function Dashboard() {
                 </section>
 
 
-                {/* =========================
-                    TASKS SECTION
-                ========================= */}
+               
 
                 <section className="todos-section">
 
 
-                    {/* =========================
-                        TASK HEADER
-                    ========================= */}
+                   
 
                     <div className="todos-header">
 
@@ -717,9 +664,7 @@ function Dashboard() {
                         </div>
 
 
-                        {/* =========================
-                            SEARCH
-                        ========================= */}
+                       
 
                         <div className="search-container">
 
@@ -761,9 +706,7 @@ function Dashboard() {
                     </div>
 
 
-                    {/* =========================
-                        FILTER BUTTONS
-                    ========================= */}
+                    
 
                     <div className="task-filters">
 
@@ -851,9 +794,7 @@ function Dashboard() {
                     </div>
 
 
-                    {/* =========================
-                        TODO LIST
-                    ========================= */}
+                    
 
                     {filteredTodos.length === 0 ? (
 
@@ -958,9 +899,7 @@ function Dashboard() {
             </main>
 
 
-            {/* =================================================
-                EDIT MODAL
-            ================================================= */}
+           
 
             {editingTodo && (
 
