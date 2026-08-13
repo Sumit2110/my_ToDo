@@ -91,7 +91,7 @@ function Sidebar({ onLogout, todos = [] }) {
                 <span>TaskFlow</span>
             </div>
 
-            {/* NAVIGATION */}
+          
             <nav className="sidebar-nav">
                 <div className="nav-item active">
                     <span>▦</span>
@@ -104,7 +104,7 @@ function Sidebar({ onLogout, todos = [] }) {
                 </div>
             </nav>
 
-            {/* DAILY ACTIVITY */}
+          
             <div className="sidebar-activity">
                 <div className="sidebar-activity-title">
                     <span>Daily Activity</span>
@@ -117,7 +117,7 @@ function Sidebar({ onLogout, todos = [] }) {
                     Today
                 </button>
 
-                {/* DATE */}
+              
                 <div className="sidebar-date">
                     <button
                         onClick={() => changeDate(-1)}
@@ -134,7 +134,7 @@ function Sidebar({ onLogout, todos = [] }) {
                     </button>
                 </div>
 
-                {/* STATS */}
+               
                 <div className="sidebar-daily-stats">
                     <div className="sidebar-stat">
                         <span className="created-dot">+</span>
@@ -165,7 +165,7 @@ function Sidebar({ onLogout, todos = [] }) {
                 </div>
             </div>
 
-            {/* LOGOUT */}
+           
             <button
                 className="logout-button"
                 onClick={onLogout}
