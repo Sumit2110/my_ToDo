@@ -16,7 +16,7 @@ function Stats({ todos }) {
 
         <section className="stats-grid">
 
-            {/* TOTAL */}
+        
 
             <div className="stat-card">
 
@@ -39,7 +39,7 @@ function Stats({ todos }) {
             </div>
 
 
-            {/* PENDING */}
+          
 
             <div className="stat-card">
 
@@ -62,7 +62,7 @@ function Stats({ todos }) {
             </div>
 
 
-            {/* COMPLETED */}
+          
 
             <div className="stat-card">
 
