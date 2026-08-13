@@ -15,7 +15,7 @@ function ToDoItem({
             }`}
         >
 
-            {/* CHECKBOX */}
+          
 
             <button
                 className="todo-check"
@@ -31,7 +31,7 @@ function ToDoItem({
             </button>
 
 
-            {/* TODO INFORMATION */}
+           
 
             <div className="todo-info">
 
@@ -47,7 +47,7 @@ function ToDoItem({
             </div>
 
 
-            {/* STATUS */}
+         
 
             <span
                 className={`status ${
@@ -64,7 +64,7 @@ function ToDoItem({
             </span>
 
 
-            {/* ACTIONS */}
+          
 
             <div className="todo-actions">
 
