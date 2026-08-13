@@ -3,7 +3,7 @@ const User = require("../models/user.model");
 
 const protect = async (req, res, next) => {
     try {
-        // Get Authorization header
+        
         const authHeader = req.headers.authorization;
 
         // Check if token exists
@@ -13,16 +13,16 @@ const protect = async (req, res, next) => {
             });
         }
 
-        // Extract token
+       
         const token = authHeader.split(" ")[1];
 
-        // Verify token
+        
         const decoded = jwt.verify(
             token,
             process.env.JWT_SECRET
         );
 
-        // Find user
+      
         const user = await User.findById(decoded.id).select("-password");
 
         if (!user) {
@@ -31,10 +31,10 @@ const protect = async (req, res, next) => {
             });
         }
 
-        // Attach user to request
+       
         req.user = user;
 
-        // Continue to next middleware/controller
+        
         next();
 
     } catch (error) {
