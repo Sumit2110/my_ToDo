@@ -32,13 +32,13 @@ function Login() {
 
             console.log("LOGIN RESPONSE:", response.data);
 
-            // Save JWT token
+          
             localStorage.setItem(
                 "token",
                 response.data.token
             );
 
-            // Save user information if backend sends it
+           
             if (response.data.user) {
                 localStorage.setItem(
                     "user",
@@ -46,7 +46,7 @@ function Login() {
                 );
             }
 
-            // Go to dashboard
+           
             navigate("/dashboard");
 
         } catch (error) {
@@ -67,7 +67,7 @@ function Login() {
 
             <div className="login-card">
 
-                {/* Logo */}
+             
 
                 <div className="login-logo">
                     <div className="login-logo-icon">
@@ -80,7 +80,7 @@ function Login() {
                 </div>
 
 
-                {/* Heading */}
+               
 
                 <div className="login-heading">
 
@@ -95,7 +95,7 @@ function Login() {
                 </div>
 
 
-                {/* Error */}
+               
 
                 {error && (
                     <div className="login-error">
@@ -104,7 +104,7 @@ function Login() {
                 )}
 
 
-                {/* Form */}
+               
 
                 <form
                     className="login-form"
@@ -160,7 +160,7 @@ function Login() {
                 </form>
 
 
-                {/* Register */}
+             
 
                 <div className="register-link">
 
