@@ -7,9 +7,7 @@ function DailyActivity({
 }) {
 
 
-    // =========================
-    // DATE FORMAT
-    // =========================
+    
 
     const formatDate = (dateString) => {
 
@@ -30,9 +28,7 @@ function DailyActivity({
     };
 
 
-    // =========================
-    // LOCAL DATE KEY
-    // =========================
+    
 
     const getDateKey = (dateValue) => {
 
@@ -65,15 +61,11 @@ function DailyActivity({
     };
 
 
-    // =========================
-    // DAILY DATA
-    // =========================
+   
 
     const dailyData = useMemo(() => {
 
-        // =========================
-        // CREATED TASKS
-        // =========================
+        =
 
         const createdTasks =
             todos.filter(
@@ -85,9 +77,7 @@ function DailyActivity({
             );
 
 
-        // =========================
-        // COMPLETED TASKS
-        // =========================
+        
 
         const completedTasks =
             todos.filter(
@@ -101,9 +91,7 @@ function DailyActivity({
             );
 
 
-        // =========================
-        // SELECTED DAY END
-        // =========================
+       
 
         const selectedDateEnd =
             new Date(
@@ -111,9 +99,7 @@ function DailyActivity({
             );
 
 
-        // =========================
-        // PENDING TASKS
-        // =========================
+       
 
         const pendingTasks =
             todos.filter(
@@ -153,9 +139,7 @@ function DailyActivity({
             );
 
 
-        // =========================
-        // TOTAL TASKS FOR DAY
-        // =========================
+       
 
         const selectedDateStart =
             new Date(
@@ -209,9 +193,7 @@ function DailyActivity({
             stillExistingFromBefore.length;
 
 
-        // =========================
-        // COMPLETION RATE
-        // =========================
+       
 
         const completedCount =
             completedTasks.length;
@@ -247,9 +229,7 @@ function DailyActivity({
     }, [todos, selectedDate]);
 
 
-    // =========================
-    // EVENT TIME
-    // =========================
+    
 
     const formatTime = (dateValue) => {
 
@@ -270,27 +250,20 @@ function DailyActivity({
     };
 
 
-    // =========================
-    // TOTAL EVENTS
-    // =========================
 
     const totalEvents =
         dailyData.createdTasks.length +
         dailyData.completedTasks.length;
 
 
-    // =========================
-    // RENDER
-    // =========================
+    
 
     return (
 
         <section className="daily-activity">
 
 
-            {/* =========================
-                HEADER
-            ========================= */}
+           
 
             <div className="daily-header">
 
@@ -316,9 +289,7 @@ function DailyActivity({
             </div>
 
 
-            {/* =========================
-                DAILY STATISTICS
-            ========================= */}
+           
 
             <div className="daily-stats">
 
@@ -350,7 +321,7 @@ function DailyActivity({
                 </div>
 
 
-                {/* COMPLETED */}
+               
 
                 <div className="daily-stat-card">
 
@@ -377,7 +348,7 @@ function DailyActivity({
                 </div>
 
 
-                {/* PENDING */}
+              
 
                 <div className="daily-stat-card">
 
@@ -404,7 +375,7 @@ function DailyActivity({
                 </div>
 
 
-                {/* COMPLETION RATE */}
+               
 
                 <div className="daily-stat-card">
 
@@ -432,9 +403,7 @@ function DailyActivity({
             </div>
 
 
-            {/* =========================
-                ACTIVITY
-            ========================= */}
+           
 
             <div className="daily-task-section">
 
@@ -452,9 +421,7 @@ function DailyActivity({
                 </div>
 
 
-                {/* =========================
-                    NO ACTIVITY
-                ========================= */}
+                
 
                 {totalEvents === 0 ? (
 
@@ -480,9 +447,7 @@ function DailyActivity({
                     <div className="activity-list">
 
 
-                        {/* =========================
-                            CREATED TASKS
-                        ========================= */}
+                       
 
                         {dailyData.createdTasks.map(
                             (todo) => (
@@ -524,9 +489,7 @@ function DailyActivity({
                         )}
 
 
-                        {/* =========================
-                            COMPLETED TASKS
-                        ========================= */}
+                       
 
                         {dailyData.completedTasks.map(
                             (todo) => (
